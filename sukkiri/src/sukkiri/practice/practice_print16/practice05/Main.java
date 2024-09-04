@@ -25,7 +25,11 @@ public class Main {
 		ArrayList<Integer> list = getListData(n);
 
 		//		 3.showListDataメソッドにArrayList型の変数を引数に入れて渡す。
-		showListData(list);
+		//showListData(list);
+		
+//		ArrayList<Integer> list = new ArrayList<>(List.of(1,2,3,4,5,6,777));
+//		showListData(list);
+		
 
 	}
 
