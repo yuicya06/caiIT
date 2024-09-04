@@ -2,6 +2,7 @@ package sukkiri.practice.practice_print16.practice02;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -20,23 +21,33 @@ public class Main {
 		//Integer型(整数)でArrayListを宣言
 		List<Integer> input = new ArrayList<>();
 
-		Scanner sc = new Scanner(System.in);
-
 		//入力回数
+		Scanner sc = new Scanner(System.in);
 		System.out.print("入力回数:");
 		int n = sc.nextInt();
 
+		Random rand = new Random();
+		
 		for (int i = 0; i < n; i++) {
 			//入力値
 			System.out.print("入力値：");
 			input.add(sc.nextInt());
+//			確認用
+//			int r = rand.nextInt(100);
+//			input.add(r);
 		}
+//		確認用
+//		for(int i: input) {
+//			System.out.println(i);
+//		}
+		
 
 		//最小値の変数作成
-		int min = Integer.MAX_VALUE;
+		//int min = Integer.MAX_VALUE;
+		int min = input.get(0);
 
 		//最小値のfor文
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < input.size(); i++) {
 
 			if (input.get(i) < min) {
 				min = input.get(i);

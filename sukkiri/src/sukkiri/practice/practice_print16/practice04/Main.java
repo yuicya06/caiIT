@@ -1,7 +1,6 @@
 package sukkiri.practice.practice_print16.practice04;
 
 import java.util.HashSet;
-import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 
@@ -33,43 +32,48 @@ public class Main {
 		Random rand = new Random();
 		while (true) {
 			int n = rand.nextInt(100);
-			//		初めて取得した値ならSetに格納していく。
+		//		初めて取得した値ならSetに格納していく。
 			bingo.add(n);
-			//		3.	Setのサイズが24になったときに無限ループからbreakで抜ける。
+		//		3.	Setのサイズが24になったときに無限ループからbreakで抜ける。
 			if (bingo.size() == 24) {
 				break;
 			}
 
 		}
-		Set<String> bingo2 = new LinkedHashSet();
-		bingo2 = bingo.tostring(); 
 		
 		
+		//確認
+//		System.out.println(bingo.size());
+//		for(int i: bingo) {
+//			System.out.println(i); 
+//			
+//		}
 		
-//
-//		int count = 0;
-//		for (int z : bingo) {
+		//NG例 Setは重複を許さない
+		//同じものがあるので24回ループしても、無視されるので、要素の数が保証されない
+//		for(int i = 0; i< 24; i++) {
 //			
-//			
-//			
-//			count++;
-//			if (count <=10 &&count % 5 == 0) {
-//				System.out.printf("%2d\n", z);
-//			} else {
-//				System.out.printf("%2d ", z);
-//			}
-//			
-//			if(count % 13 == 0) {
-//			System.out.printf("%s%3d ", "☆", z);
-//			}
-//			
-			
+//			int r = rand.nextInt(100);
+//			bingo.add(r);
+//		}
+		
+		
 		
 
-			//}
+		int count = 0;
 
-	//	}
+		for (Integer x : bingo) {
+			count++;
+			if (count == 5 || count == 10 || count == 14 || count == 19) {
+				System.out.printf("%2d\n", x);
+			} else if (count == 13) {
+				System.out.printf("%s %2d ", "☆", x);
+			} else {
+				System.out.printf("%2d ", x);
+			}
 
-}
+		}
+
+	}
 
 }
