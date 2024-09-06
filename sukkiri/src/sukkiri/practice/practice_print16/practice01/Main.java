@@ -50,21 +50,38 @@ public class Main {
 		}
 
 		//		(7)for文を使い変数numListの中身の値が100以上の要素を削除してください。
-		
-		
-		
-		
-		for (int i = 0; i < numList.size(); i++) {
-			if (numList.get(i) >= 100) {
-				numList.remove(i);
-			}
-		}
-		for (int i = 0; i < numList.size(); i++) {
+
+		//                2     3
+		//  1     10    100   200
+		//  1     10    200    removeされた時、前に詰められるので判定をとばされる 
+		//                     index番号2の200の判定のために、ディクリメントしてループを戻す		
+		//回答（１）
+//		for (int i = 0; i < numList.size(); i++) {
+//			if (numList.get(i) >= 100) {
+//				numList.remove(i);
+//				i--;
+//			}
+//		}
+/*
+		//回答（２）
+		//後の方から削除していくので、前に詰める動きに干渉しない
+		for (int i = numList.size() - 1; i > 0; i--) {
 			if (numList.get(i) >= 100) {
 				numList.remove(i);
 			}
 		}
 
+*/
+		///回答（３）Iteratorでの回答
+		//要素数でループしない、次の要素の中身があるかでループする
+		Iterator<Integer> it_int = numList.iterator();
+		while(it_int.hasNext()) {
+			if(it_int.next()>=100) {
+				it_int.remove();
+			}
+		}
+		
+		
 		//		(8)拡張for文を使い変数numListの中身を順番に表示してください。(P585参照)
 		for (int i : numList) {
 			System.out.println(i);

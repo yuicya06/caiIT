@@ -64,6 +64,10 @@ public class Main {
 
 		for (Integer x : bingo) {
 			count++;
+			
+			
+			
+			
 			if (count == 5 || count == 10 || count == 14 || count == 19) {
 				System.out.printf("%2d\n", x);
 			} else if (count == 13) {
