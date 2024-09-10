@@ -44,6 +44,7 @@ public class Main {
 
 		//LocalDate型を文字列に変換 -> LocalDate型変数.format(書式);
 		String str = ldatep.format(fmt);
+		System.out.println("str：" + str);
 
 		//違う書式の設定
 		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("yyyy年MM月dd日");

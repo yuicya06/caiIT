@@ -31,6 +31,8 @@ public class Main {
 		//cの値：(一部省略)MONTH=9,WEEK_OF_YEAR=35,WEEK_OF_MONTH=5,DAY_OF_MONTH=18,DAY_OF_YEAR=241,DAY_OF_WEEK=4,DAY_OF_WEEK_IN_MONTH=4,AM_PM=1,HOUR=2,HOUR_OF_DAY=5,MINUTE=53,SECOND=20,MILLISECOND=593,ZONE_OFFSET=32400000,DST_OFFSET=0]
 		//System.out.println("ccc" + c.getTime());
 		//Calendar型cをDate型に変換し、Date型変数dに代入
+		
+		System.out.println("c：" + c.getTime());
 		Date d = c.getTime();//Dateはjava.util.のインポート（sqlもあるがまた別）
 		System.out.println("d：" + d);
 		//実行結果（Date型）
