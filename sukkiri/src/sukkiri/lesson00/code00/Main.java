@@ -1,5 +1,5 @@
 package sukkiri.lesson00.code00;
-
+//testtest
 public class Main {
 
 	public static void main(String[] args) {
