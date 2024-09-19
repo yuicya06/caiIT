@@ -18,7 +18,7 @@ public class Main {
 		double sum = 0;
 		for (int i = 0; i < array.length; i++) {
 
-			sum += sum + array[i];
+			sum +=  array[i];
 
 		}
 
@@ -58,7 +58,7 @@ public class Main {
 		double[] x = new double[a];
 
 		for (int i = 0; i < x.length; i++) {
-			double r = rand.nextDouble(1.0);
+			double r = rand.nextDouble();
 			System.out.printf("乱数値は%.1fです\n", r);
 			x[i] = r;
 
@@ -84,5 +84,7 @@ public class Main {
 		System.out.printf("平均値は%.2fです\n", avg);
 
 	}
+	
+	
 
 }

@@ -7,7 +7,7 @@ public class Main {
 	//		 処理の内容： 引数で受け取る2つの値のうち、小さい方の値を返す
 
 	public static double getMin(double a, double b) {
-
+		
 		//double getMin = a > b ?  b : a; //三項条件演算子	条件式 ? trueの値: falseの値 ;
 		//return getMin;
 

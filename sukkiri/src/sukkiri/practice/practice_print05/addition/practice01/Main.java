@@ -15,6 +15,8 @@ public class Main {
 
 		return p;
 	}
+	
+	
 	//
 	//		メソッド名：sub
 	//		引数：int a, int b
